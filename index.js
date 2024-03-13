@@ -14,7 +14,9 @@ const initBot = () => {
         let botSocket = bot._client.socket;
         console.log(`Logged in to ${botSocket.server ? botSocket.server : botSocket._host}`);
     });
+    bot.once('spawn', () => {
     bot.setControlState('jump', true);
+    });
     bot.on('end', () => {
         console.log(`Disconnected`);
 
