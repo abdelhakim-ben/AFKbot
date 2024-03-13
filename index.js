@@ -15,4 +15,3 @@ let bot = mineflayer.createBot(botarg);
 bot.on('end', () => {
     console.log(`Disconnected`);
 });
-
