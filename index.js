@@ -6,7 +6,7 @@ const botArgs = {
 };
 
 const initBot = () => {
-
+    bot.setControlState('jump', true);
     // Setup bot connection
     let bot = mineflayer.createBot(botArgs);
 
