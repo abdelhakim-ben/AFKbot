@@ -6,7 +6,7 @@ const botArgs = {
 };
 
 const initBot = () => {
-    bot.setControlState('jump', true);
+    
     // Setup bot connection
     let bot = mineflayer.createBot(botArgs);
 
@@ -14,7 +14,7 @@ const initBot = () => {
         let botSocket = bot._client.socket;
         console.log(`Logged in to ${botSocket.server ? botSocket.server : botSocket._host}`);
     });
-
+    bot.setControlState('jump', true);
     bot.on('end', () => {
         console.log(`Disconnected`);
 
